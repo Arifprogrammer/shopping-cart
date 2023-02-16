@@ -4,6 +4,7 @@ function quantityTotalByInput(id, plus, quantityTotal){
         value.value = parseInt(value.value) + 1;
     }else{
         value.value = parseInt(value.value) - 1;
+        if (value.value < 0) value.value = 0;
     }
     if(quantityTotal == "without-case-quantity"){
         const withoutCaseQuantity = document.getElementById(quantityTotal);
@@ -30,3 +31,6 @@ function getTotal(){
     const total = document.getElementById("total");
     total.innerText = subTotal + tax;
 }
+
+// const input = document.getElementById("without-case-input").addEventListener()
+// input.value;
